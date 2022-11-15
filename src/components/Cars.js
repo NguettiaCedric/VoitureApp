@@ -3,30 +3,75 @@ import React from "react";
 
 
 const Car = ({children , color}) => {
-    
+
     const InfoColor = color ? (<p>Couleur: { color }</p>) : (<p>Couleur: Néant</p>);
      // console.log(children);
 
-     if (children) {
-        return (
 
-            <div style={{backgroundColor:'pink', width:'400px', padding:'10px', margin:'5px auto'}}>
+     /* ------------------------------------------------------------------------------------------- */
+    //  if (children) {
+    //     return (
+
+    //         <div style={{backgroundColor:'pink', width:'400px', padding:'10px', margin:'5px auto'}}>
     
-                <p>Marque : { children }</p>
-               {/* { color ? <p>Couleur: { color }</p> :  <p>Couleur: Néant </p> } */}
-                { InfoColor }
-            </div>
-        )
+    //             <p>Marque : { children }</p>
+    //            {/* { color ? <p>Couleur: { color }</p> :  <p>Couleur: Néant </p> } */}
+    //             { InfoColor }
+    //         </div>
+    //     )
+    //  }else{
+    //     return (
+
+    //         <div style={{backgroundColor:'pink', width:'400px', padding:'10px', margin:'5px auto'}}>
+    
+    //             <p>Pas de data !</p>
+    //         </div>
+    //     )
+    //  }
+
+     /* ------------------------------------------------------------------------------------------- */
+
+     let InfoColors = "";
+     if(color){
+        InfoColors = color;
      }else{
-        return (
-
-            <div style={{backgroundColor:'pink', width:'400px', padding:'10px', margin:'5px auto'}}>
-    
-                <p>Pas de data !</p>
-            </div>
-        )
+        InfoColors = "Néant";
      }
 
+     /* ------------------------------------------------------------------------------------------- */
+//      return children && (
+
+//       <div style={{backgroundColor:'pink', width:'400px', padding:'10px', margin:'5px auto'}}>
+
+//           <p>Marque : { children }</p>
+//            <p>Couleur: {InfoColors} </p> 
+
+//       </div>
+//   ) 
+     /* ------------------------------------------------------------------------------------------- */
+     return children ? (
+
+           <div style={{backgroundColor:'pink', width:'400px', padding:'10px', margin:'5px auto'}}>
+   
+               <p>Marque : { children }</p>
+                <p>Couleur: {InfoColors} </p> 
+   
+           </div>
+       ) : <p style={{backgroundColor:'pink', width:'400px', padding:'10px', margin:'5px auto'}}>Pas de data !</p>
+
+     /* ------------------------------------------------------------------------------------------- */
+
+   //   return children ? (
+
+   //      <div style={{backgroundColor:'pink', width:'400px', padding:'10px', margin:'5px auto'}}>
+
+   //          <p>Marque : { children }</p>
+   //           <p>Couleur: {InfoColors} </p> 
+
+   //      </div>
+   //  ) : <p style={{backgroundColor:'pink', width:'400px', padding:'10px', margin:'5px auto'}}>Pas de data !</p>
+
+     /* ------------------------------------------------------------------------------------------- */
     
 }
 
