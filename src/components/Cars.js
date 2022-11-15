@@ -1,11 +1,12 @@
 import React from "react";
+import Wrapper from "./Wrapper";
 
 
 
 const Car = ({children , color}) => {
 
     const InfoColor = color ? (<p>Couleur: { color }</p>) : (<p>Couleur: Néant</p>);
-     // console.log(children);
+     // console.log(color);
 
 
      /* ------------------------------------------------------------------------------------------- */
@@ -32,32 +33,39 @@ const Car = ({children , color}) => {
      /* ------------------------------------------------------------------------------------------- */
 
      let InfoColors = "";
+
      if(color){
+
         InfoColors = color;
+
      }else{
+
         InfoColors = "Néant";
      }
 
      /* ------------------------------------------------------------------------------------------- */
-//      return children && (
+     return children && (
 
-//       <div style={{backgroundColor:'pink', width:'400px', padding:'10px', margin:'5px auto'}}>
-
-//           <p>Marque : { children }</p>
-//            <p>Couleur: {InfoColors} </p> 
-
-//       </div>
-//   ) 
-     /* ------------------------------------------------------------------------------------------- */
-     return children ? (
-
-           <div style={{backgroundColor:'pink', width:'400px', padding:'10px', margin:'5px auto'}}>
-   
+          <Wrapper>
                <p>Marque : { children }</p>
-                <p>Couleur: {InfoColors} </p> 
+               <p>Couleur: {InfoColors} </p> 
+          </Wrapper>
+
+          // <div style={{backgroundColor:'pink', width:'400px', padding:'10px', margin:'5px auto'}}>
+          //      <p>Marque : { children }</p>
+          //      <p>Couleur: {InfoColors} </p> 
+          // </div>
+     ) 
+     /* ------------------------------------------------------------------------------------------- */
+     // return children ? (
+
+     //       <div style={{backgroundColor:'pink', width:'400px', padding:'10px', margin:'5px auto'}}>
    
-           </div>
-       ) : <p style={{backgroundColor:'pink', width:'400px', padding:'10px', margin:'5px auto'}}>Pas de data !</p>
+     //           <p>Marque : { children }</p>
+     //            <p>Couleur: {InfoColors} </p> 
+   
+     //       </div>
+     //   ) : <p style={{backgroundColor:'pink', width:'400px', padding:'10px', margin:'5px auto'}}>Pas de data !</p>
 
      /* ------------------------------------------------------------------------------------------- */
 

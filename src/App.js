@@ -1,11 +1,11 @@
 import React, { Component} from 'react';
 import './App.css';
-import Mycars from './components/Mycars';
+import { Mycars } from './components/Mycars';
 
 class App extends Component {
 
   state = {
-    titre : "Mon catalogue voitures",
+    titre : "Mon catalogue voitures ",
     color : "green",
   }
 
@@ -18,7 +18,7 @@ class App extends Component {
 
       <div className="App">
 
-        {/* On passe le state comme un props dans cet element parent pour le recupérer dans l'element enfant MyCas grace à this (class->state)*/}
+        {/* On passe le state comme un props dans cet element parent pour le recupérer dans l'element enfant MyCars grace à this (class->state)*/}
         <Mycars 
           title = { this.state.titre } 
           color = { this.state.color } 
