@@ -3,6 +3,7 @@ import React from "react";
 
 
 const Car = ({children , color}) => {
+    
     const InfoColor = color ? (<p>Couleur: { color }</p>) : (<p>Couleur: Néant</p>);
      // console.log(children);
 
@@ -21,7 +22,7 @@ const Car = ({children , color}) => {
 
             <div style={{backgroundColor:'pink', width:'400px', padding:'10px', margin:'5px auto'}}>
     
-                <p>Pas de data</p>
+                <p>Pas de data !</p>
             </div>
         )
      }
