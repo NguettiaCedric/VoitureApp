@@ -3,11 +3,55 @@ import Car from './Cars';
 import MyHeader from "./MyHeader";
 import Wrapper from "./Wrapper";
 // import MyHeader from "./MyHeader";
+
+
+/* const Car = ({children , color}) => {
+
+    const InfoColor = color ? (<p>Couleur: { color }</p>) : (<p>Couleur: Néant</p>);
+     let InfoColors = "";
+
+     if(color){
+
+        InfoColors = color;
+
+     }else{
+
+        InfoColors = "Néant";
+     }
+     return children && (
+
+          <Wrapper>
+               <p>Marque : { children }</p>
+               <p>Couleur: {InfoColors} </p> 
+          </Wrapper>
+     )     
+} */
+
+
+
 export class Mycars extends Component {
 
     state = {
         cars : ["Ford", "Mercedes", "Peugeot"]
     }
+
+    noCopy = () =>{
+        alert('Merci de ne pas copier ce texte.')
+    }
+
+    addStyle = (e) =>{
+        // console.log(e.target.classList.add('styled'));
+
+        if(e.target.classList.contains('styled')){
+            
+            e.target.classList.remove('styled');
+
+        }else{
+
+            e.target.classList.add('styled');
+        }
+    }
+
     render(){
 
         // console.log(this);
@@ -17,21 +61,26 @@ export class Mycars extends Component {
         // console.log(color);
         return(
 
-            <div className= "">            
-                <Wrapper>
-                    <MyHeader myStyle={color}>
-                        {title} 
-                    </MyHeader>
+            <div className= "">  
 
-                    {/* <h1 style={{ color:color }}> 
+                <p onCopy={this.noCopy}>lorem ipsum lorem ipsum lorem ipsum</p>          
+                <Wrapper>
+                    {/* <MyHeader myStyle={color}>
                         {title} 
-                    </h1> */}
+                    </MyHeader> */}
+
+                    {/* <h1 onMouseOver={this.addStyle} style={{ color:color }}>  */}
+                    <h1 onMouseOver={this.addStyle}> 
+                        {title} 
+                    </h1>
+
+
                 </Wrapper>
 
                 <Car color="red">{this.state.cars[0]}</Car>
                 <Car color="">{this.state.cars[1]}</Car>
                 <Car color="green">{this.state.cars[2]}</Car>
-                
+
             </div>  
 
         )     
