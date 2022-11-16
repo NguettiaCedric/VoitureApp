@@ -30,11 +30,11 @@ import Wrapper from "./Wrapper";
 
 
 export class Mycars extends Component {
-
     state = {
         cars : ["Ford", "Mercedes", "Peugeot"]
     }
 
+    
     noCopy = () =>{
         alert('Merci de ne pas copier ce texte.')
     }
@@ -54,10 +54,11 @@ export class Mycars extends Component {
 
     render(){
 
-        // console.log(this);
-        // const title = this.props.title;
-        const { title , color } = this.props;
-        // const {color} = this.props;
+        console.log(this);
+        
+        const title = this.props.title;
+        const color = this.props.color;
+        // const { title , color } = this.props;
         // console.log(color);
         return(
 
@@ -65,14 +66,21 @@ export class Mycars extends Component {
 
                 <p onCopy={this.noCopy}>lorem ipsum lorem ipsum lorem ipsum</p>          
                 <Wrapper>
-                    {/* <MyHeader myStyle={color}>
+
+                    <MyHeader propsColor={color}>
+                        {title} 
+                    </MyHeader>
+
+                     {/* <MyHeader myStyle={color}>
                         {title} 
                     </MyHeader> */}
 
+
                     {/* <h1 onMouseOver={this.addStyle} style={{ color:color }}>  */}
-                    <h1 onMouseOver={this.addStyle}> 
+
+                    {/* <h1 onMouseOver={this.addStyle}> 
                         {title} 
-                    </h1>
+                    </h1> */}
 
 
                 </Wrapper>

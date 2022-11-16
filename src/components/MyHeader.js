@@ -1,7 +1,7 @@
 import React from "react";
 
-const MyHeader = ({myStyle, children}) => <h1 style={{ color:myStyle }}>{children}</h1>
+const MyHeader = ({propsColor, children}) => <h1 style={{ color:propsColor }}>{children}</h1>
 
-
+// console.log(children);
 
 export default MyHeader;
