@@ -54,7 +54,7 @@ export class Mycars extends Component {
 
     render(){
 
-        console.log(this);
+        // console.log(this);
         
         const title = this.props.title;
         const color = this.props.color;
@@ -67,7 +67,7 @@ export class Mycars extends Component {
                 <p onCopy={this.noCopy}>lorem ipsum lorem ipsum lorem ipsum</p>          
                 <Wrapper>
 
-                    <MyHeader propsColor={color}>
+                    <MyHeader propsColor={color} >
                         {title} 
                     </MyHeader>
 
@@ -76,7 +76,7 @@ export class Mycars extends Component {
                     </MyHeader> */}
 
 
-                    {/* <h1 onMouseOver={this.addStyle} style={{ color:color }}>  */}
+                    {/* <h1 onMouseOver={this.addStyle}> {title} </h1> */}
 
                     {/* <h1 onMouseOver={this.addStyle}> 
                         {title} 
